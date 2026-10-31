@@ -73,34 +73,42 @@ Both values matched the Rail documentation and Figma library.
 
 ## 4. Usability Testing Script
 
-Backlog item: HEARD-204 – Guests Don't Know What They'll Pay Until the Last Screen
-
+Backlog item: HEARD-204 — Guests Don't Know What They'll Pay Until the Last Screen
 Surface: Heard Guest
-Flow: Current Guest ordering experience
-Testing rounds: Week 2 and Week 6
-Status: Written, not yet tested
+Role card: Guest — first order
+Current flow: https://ryanlikesdesign.github.io/dsn326-starter/legacy/guest/
+Status: Written in Week 1; no testing conducted
 
-### Task 1 — Choose a Meal
-You're ordering takeout for yourself. Choose a meal you would enjoy and find out approximately how much it will cost.
+### Task 1 — Choose Dinner
+You're picking up dinner for yourself on your way home. Choose a meal you'd enjoy and find out approximately how much it costs.
 
-### Task 2 — Change Your Order
-You've changed your mind about part of your meal. Make the change while keeping the rest of your order.
+### Task 2 — Change Your Mind
+You realize you want something different about your order. Make a change without losing the rest of what you've chosen.
 
 ### Task 3 — Understand the Total
-Before committing to your purchase, figure out how much you're expected to pay, including any additional charges.
+Before paying, figure out how much the entire order will cost. Tell me when you feel confident you know what you'll pay.
 
-### Task 4 — Understand Additional Charges
-You want to know where your money is going. Find out what charges are included beyond the food itself.
+### Task 4 — Use a Discount
+You received the promo code FARO5 for $5 off your order. Use the discount and find out how it affects the amount you'll pay.
 
-### Task 5 — Complete Your Purchase
-You're satisfied with your order and want to pick it up as soon as possible. Complete the purchase using an available payment method.
+### Task 5 — Finish Ordering
+You want to pick up your food as soon as possible. Complete your purchase using an available payment method and test information.
 
-### Why I Chose These Tasks
-I chose these five tasks because they cover the ordering process from choosing food through checkout. They also focus on the points where customers need to understand prices and make decisions about spending.
+### Why I Chose These Five Tasks
+
+I chose these tasks because they follow the normal ordering experience, from choosing food to completing checkout. They also let me observe when a customer understands the total price, how additional charges affect their expectations, and whether they can recover after changing their mind. Task 3 is especially important for HEARD-204 because it directly tests the problem I'm investigating.
 
 ### Testing Rules
-- Use the same five task prompts in Week 2 and Week 6.
-- Do not change the task wording between rounds.
+
+- Read the Guest — first order role card before starting.
+- Read the exact consent statement from the Task Session Kit.
+- Use these exact five tasks in Weeks 2 and 6.
+- Do not give directions or hints during the tasks.
+- Use test information only.
+- Record each participant's completion, time, difficulties, and comments.
+- Reset the flow between tasks if necessary, and record each reset.
+- No sessions were conducted during Week 1.
+
 - Record what participants actually do and say.
 - Do not record invented results.
 - No testing sessions were conducted during Week 1.
