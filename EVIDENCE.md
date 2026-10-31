@@ -57,7 +57,19 @@ Rail has two environment settings: standard and high-glare.
 
 The Figma variables and tokens.css show that target/min changes with environment but not density.
 
-Browser Computed-panel verification: Pending.
+### Browser Computed-Panel Verification
+
+Date: October 30, 2026
+Environment: Chrome on macOS
+Page: Rail Starter GitHub Pages website
+Selected element: div#app.density-comfortable.env-standard
+
+| Token | Computed Value | Expected Value | Result |
+|---|---|---|---|
+| --target-min | 44px | 44px | Match |
+| --type-body-size | 16px | 16px | Match |
+
+Both values matched the Rail documentation and Figma library.
 
 ## 4. Usability Testing Script
 
