@@ -59,10 +59,10 @@ The Figma variables and tokens.css show that target/min changes with environment
 
 ### Browser Computed-Panel Verification
 
-Date: October 30, 2026
-Environment: Chrome on macOS
-Page: Rail Starter GitHub Pages website
-Selected element: div#app.density-comfortable.env-standard
+- Date: October 30, 2026
+- Environment: Chrome on macOS
+- Page: Rail Starter GitHub Pages website
+- Selected element: div#app.density-comfortable.env-standard
 
 | Token | Computed Value | Expected Value | Result |
 |---|---|---|---|
@@ -73,11 +73,11 @@ Both values matched the Rail documentation and Figma library.
 
 ## 4. Usability Testing Script
 
-Backlog item: HEARD-204 — Guests Don't Know What They'll Pay Until the Last Screen
-Surface: Heard Guest
-Role card: Guest — first order
-Current flow: https://ryanlikesdesign.github.io/dsn326-starter/legacy/guest/
-Status: Written in Week 1; no testing conducted
+- Backlog item: HEARD-204 — Guests Don't Know What They'll Pay Until the Last Screen
+- Surface: Heard Guest
+- Role card: Guest — first order
+- Current flow: https://ryanlikesdesign.github.io/dsn326-starter/legacy/guest/
+- Status: Written in Week 1; no testing conducted
 
 ### Task 1 — Choose Dinner
 You're picking up dinner for yourself on your way home. Choose a meal you'd enjoy and find out approximately how much it costs.
@@ -85,18 +85,18 @@ You're picking up dinner for yourself on your way home. Choose a meal you'd enjo
 ### Task 2 — Change Your Mind
 You realize you want something different about your order. Make a change without losing the rest of what you've chosen.
 
-### Task 3 — Understand the Total
-Before paying, figure out how much the entire order will cost. Tell me when you feel confident you know what you'll pay.
-
-### Task 4 — Use a Discount
+### Task 3 — Use a Discount
 You received the promo code FARO5 for $5 off your order. Use the discount and find out how it affects the amount you'll pay.
+
+### Task 4 — Understand the Total
+Before paying, figure out how much the entire order will cost. Tell me when you feel confident you know what you'll pay.
 
 ### Task 5 — Finish Ordering
 You want to pick up your food as soon as possible. Complete your purchase using an available payment method and test information.
 
 ### Why I Chose These Five Tasks
 
-I chose these tasks because they follow the normal ordering experience, from choosing food to completing checkout. They also let me observe when a customer understands the total price, how additional charges affect their expectations, and whether they can recover after changing their mind. Task 3 is especially important for HEARD-204 because it directly tests the problem I'm investigating.
+I chose these tasks because they follow the normal ordering experience, from choosing food to completing checkout. They also let me observe when a customer understands the total price, how additional charges affect their expectations, and whether they can recover after changing their mind. Task 4 is especially important for HEARD-204 because it directly tests the problem I'm investigating.
 
 ### Testing Rules
 
@@ -107,7 +107,6 @@ I chose these tasks because they follow the normal ordering experience, from cho
 - Use test information only.
 - Record each participant's completion, time, difficulties, and comments.
 - Reset the flow between tasks if necessary, and record each reset.
-- No sessions were conducted during Week 1.
 
 - Record what participants actually do and say.
 - Do not record invented results.
