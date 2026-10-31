@@ -1,0 +1,17 @@
+# Instructor answer key. Never ships to a student repo.
+FLAWS.md
+
+# Instructor guardrails for AI agents. Never ships to a student repo.
+CLAUDE.local.md
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Editor noise
+.vscode/
+.idea/
+
+# Instructor answer keys. Generated into the instructor folder, never here.
+INSTRUCTOR-*.md
+.env
