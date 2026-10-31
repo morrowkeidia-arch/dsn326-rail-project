@@ -73,12 +73,34 @@ Both values matched the Rail documentation and Figma library.
 
 ## 4. Usability Testing Script
 
-The five-task script will be added after the Guest backlog item is selected.
+Backlog item: HEARD-204 – Guests Don't Know What They'll Pay Until the Last Screen
 
-No usability testing sessions have been conducted yet. Testing begins in Week 2.
+Surface: Heard Guest
+Flow: Current Guest ordering experience
+Testing rounds: Week 2 and Week 6
+Status: Written, not yet tested
 
-## 5. Session Results
+### Task 1 — Choose a Meal
+You're ordering takeout for yourself. Choose a meal you would enjoy and find out approximately how much it will cost.
 
-No participants tested during Week 1.
+### Task 2 — Change Your Order
+You've changed your mind about part of your meal. Make the change while keeping the rest of your order.
 
-Week 2 testing results will be recorded here without changing the five original tasks.
+### Task 3 — Understand the Total
+Before committing to your purchase, figure out how much you're expected to pay, including any additional charges.
+
+### Task 4 — Understand Additional Charges
+You want to know where your money is going. Find out what charges are included beyond the food itself.
+
+### Task 5 — Complete Your Purchase
+You're satisfied with your order and want to pick it up as soon as possible. Complete the purchase using an available payment method.
+
+### Why I Chose These Tasks
+I chose these five tasks because they cover the ordering process from choosing food through checkout. They also focus on the points where customers need to understand prices and make decisions about spending.
+
+### Testing Rules
+- Use the same five task prompts in Week 2 and Week 6.
+- Do not change the task wording between rounds.
+- Record what participants actually do and say.
+- Do not record invented results.
+- No testing sessions were conducted during Week 1.
