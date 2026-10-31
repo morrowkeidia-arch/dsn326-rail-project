@@ -1,39 +1,72 @@
-# Evidence
+# EVIDENCE.md
+## DSN 326 – Design Review 1
+### Week 1: Rail Onboarding
 
-*Raw findings. Not summaries.*
+## 1. Rail Token Parity Check
 
-Replace this placeholder in Week 1. Your token values from the parity check go in first.
+Date: October 30, 2026
 
-**The rule:** somebody else should be able to open this file and audit your conclusions without asking you a question.
+I compared design tokens in the Rail Figma library with the values in the starter repository's tokens.css file. I started with five tokens from different groups and continued checking until I reached ten.
 
-**What goes in:**
-
-- **Forum quotes** with their source URL and date. The actual quote, not your paraphrase.
-- **Per-participant session results.** One block per person: date, which round, how you ran it, task by task, what they did, what they said, where they stopped.
-- **Consent records.** For a live session, that you read the line. For an asynchronous one, their "yes" reply with the date.
-- **Coded themes**, with how many items fell into each.
-- **Token values** from the Week 1 parity check, both sides.
-- **Cancellations**, with the date you booked and the date they dropped.
-
-**What doesn't:** conclusions, arguments, anything you have already interpreted. Those go in [DECISIONS.md](DECISIONS.md) or your Studio submission.
-
-Keeping raw evidence separate from your reading of it is what lets you change your mind without losing the data.
-
----
-
-## Week 1: Rail parity check
-
-| Token | Figma value | `tokens.css` value | Agree? |
+| Token | Figma Value | tokens.css Value | Match? |
 |---|---|---|---|
-|  |  |  |  |
+| primary/600 | #C93D12 | #C93D12 | Yes |
+| type/body/size (comfortable) | 16px | 16px | Yes |
+| space/inset/md (comfortable) | 16px | 16px | Yes |
+| radius/md (Guest) | 12px | 12px | Yes |
+| target/min (standard) | 44px | 44px | Yes |
+| neutral/700 | #524C46 | #524C46 | Yes |
+| line-primary/500 | #5560B3 | #5560B3 | Yes |
+| service/approaching | #F5C518 | #F5C518 | Yes |
+| space/inset/md (compact) | 12px | 12px | Yes |
+| target/min (high-glare) | 56px | 56px | Yes |
 
----
+Result: Checked ten token values, and all ten matched.
 
-## Sessions
+Sources:
+- Rail Figma Design System (personal copy)
+- rail/tokens.css in the DSN 326 starter repository
 
-### P1 — YYYY-MM-DD, round [1/2]
+## 2. Density Check
 
-**Consent:** 
-**Setup:** 
-**Task 1:** 
-**Task 2:** 
+Rail uses three density settings: comfortable, compact, and service.
+
+| Token | Comfortable | Compact | Service |
+|---|---|---|---|
+| type/body/size | 16px | 14px | 24px |
+| space/inset/md | 16px | 12px | 24px |
+
+These values were recorded from the Figma variables and checked against tokens.css.
+
+## 3. Environment Check
+
+Rail has two environment settings: standard and high-glare.
+
+| Environment | target/min |
+|---|---|
+| Standard | 44px |
+| High-glare | 56px |
+
+### Target Minimum Across Densities
+
+| Density | Standard | High-Glare |
+|---|---|---|
+| Comfortable | 44px | 56px |
+| Compact | 44px | 56px |
+| Service | 44px | 56px |
+
+The Figma variables and tokens.css show that target/min changes with environment but not density.
+
+Browser Computed-panel verification: Pending.
+
+## 4. Usability Testing Script
+
+The five-task script will be added after the Guest backlog item is selected.
+
+No usability testing sessions have been conducted yet. Testing begins in Week 2.
+
+## 5. Session Results
+
+No participants tested during Week 1.
+
+Week 2 testing results will be recorded here without changing the five original tasks.
