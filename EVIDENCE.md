@@ -111,3 +111,114 @@ I chose these tasks because they follow the normal ordering experience, from cho
 - Record what participants actually do and say.
 - Do not record invented results.
 - No testing sessions were conducted during Week 1.
+Week 2: Design Review 2B — Baseline Sessions for HEARD-204
+
+Date: November 6, 2026
+Surface: Heard Guest — current legacy checkout
+Script: The five tasks in Section 4, “Usability Testing Script,” above were used without changes.
+Participants: Two different adults outside DSN 326, identified here as P1 and P2.
+Setup: Both received the Guest — first order role card, and I read the consent line to both.
+
+Raw task results
+
+Task from the Week 1 script
+
+P1 completed?
+
+P1 time
+
+P2 completed?
+
+P2 time
+
+Observations
+
+1. Choose Dinner
+
+Yes
+
+Not separately recorded
+
+Yes
+
+Not separately recorded
+
+P1 read the menu carefully. P2 selected two orders of chips and salsa and a chicken tinga burrito.
+
+2. Change Your Mind
+
+Yes
+
+Not separately recorded
+
+Yes
+
+Not separately recorded
+
+Both made a change to their orders. Specific changes were not recorded.
+
+3. Use a Discount
+
+No
+
+Not separately recorded
+
+No
+
+Not separately recorded
+
+Both found where to enter FARO5, but the code did not work and no discount was applied. The reason for the error was not established.
+
+4. Understand the Total
+
+Yes*
+
+Not separately recorded
+
+Yes*
+
+Not separately recorded
+
+Both said they felt confident about the total, but neither located the itemized breakdown. P1 reviewed why the order cost so much; P2 said there were no hidden fees.
+
+5. Finish Ordering
+
+Yes
+
+Not separately recorded
+
+Yes
+
+Not separately recorded
+
+Both completed the test checkout. Both liked that payment cards saved on their phones appeared as payment options, which made this step feel quick.
+
+Total session time: P1: 5:00; P2: 1:24. These are overall times, not sums of recorded task times. I did not time each task separately, which is a limitation of these baseline records. Task 4 is marked completed based on participants reporting confidence in their final total, not on their ability to find the breakdown.
+
+Specific moments and observation notes
+
+P1, menu and cart: P1 spent time reading menu details and then reviewed the cart to understand the higher-than-expected total. The overall session lasted five minutes. P1 commented that the text was too small and hard to read. This is a reported readability issue; I did not measure the text size during the session.
+
+P1, tip decision: While reviewing the price, P1 stopped to consider whether to include a tip. I did not record the length of this pause separately.
+
+P2, pricing: P2 ordered two portions of chips and salsa plus a chicken tinga burrito. The displayed total was $35.77. P2 said the ordering process was straightforward and that the price was high, but did not report hidden fees.
+
+Both participants, breakdown: Neither participant found the itemized fee breakdown. They still said they knew the final total and completed checkout.
+
+Both participants, promotion: Both located the promo entry and attempted FARO5, but the code did not work. This is a separate failure from the HEARD-204 fee-understanding issue.
+
+Both participants, payment: Both reacted positively when cards already saved on their phones appeared as payment options. They said that made paying quick. This is an observation about the end-to-end checkout experience; the saved-card suggestions may be supplied by the phone or browser rather than by Heard Guest itself.
+
+These notes describe observations and paraphrase feedback reported after the sessions; they are not verbatim transcripts. The original observation notes should be retained with the assignment records.
+
+Pattern and framed problem
+
+Observed pattern: Both participants completed checkout and felt confident in their totals, but 0 of 2 found the itemized fee breakdown. This is a small two-person baseline and does not establish how common the problem is among all Heard Guest customers.
+
+Framed problem: First-time and occasional Heard Guest customers can finish checkout knowing the final price without being able to find out how that price is divided into fees, tax, and tip. In my two sessions, both adults completed checkout and said they knew the total, but neither found the itemized breakdown. One spent extra time checking the cart, while the other thought a $35.77 order was expensive but did not see hidden fees. This relates to Nielsen's visibility of system status heuristic because the explanation for the displayed total is not easy to find when guests review their cart.
+
+One success measure for Week 6
+
+Measure: When running the same five-task script on the redesign, 2 of 2 participants will locate the itemized fee breakdown before payment without hints (baseline: 0 of 2). This is a behavioral measure visible in two sessions, not a claim that conversion will improve. Its direction comes from the Heard PM Context Pack checkout-completion metric: 71%, down from 76% before the March fee change.
+
+Known limits: No separate task times were recorded; the promo-code failure was not diagnosed; two participants are not representative of all guests. In Week 6, the exact Week 1 task wording must remain unchanged and times should be captured separately for every task.
