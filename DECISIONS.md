@@ -71,3 +71,43 @@ I used ChatGPT to help organize the requirements, compare the Figma screenshots 
 
 I reviewed the information against the course materials and screenshots. The Figma work, GitHub setup, browser inspection, and project decisions were completed by me. No AI-generated design changes were made to the Rail system.
 
+## Design Review 2A — Gap Closure
+
+Keidia Morrow
+Ticket: HEARD-204 — Guests Don't Know What They'll Pay Until the Last Screen
+
+### Gap 1: The Missing Number
+
+The gap: The ticket reports about 1,800 support tickets mentioning “hidden,” “surprise,” or “fees” last quarter, but does not say what share of all Guest orders or support tickets that represents. It also does not identify which checkout step guests abandon.
+
+What I found: Guest checkout completion is currently 71%, down from 76% before the March change. Abandonment therefore increased from 24% to 29%, a five-percentage-point increase. The PM pack says there is no breakdown by checkout step. Because the March release changed both restaurant fee controls and the legally required price display, we cannot attribute the drop to one change. The 1,800 complaint count also has no stated denominator.
+
+Source: HEARD-204 ticket, “What we know” and “Constraints”; Heard PM Context Pack, “What we measure” table and FAQ (“What's the actual checkout abandonment number?” and “Where in checkout do people drop?”).
+
+What it changes: The decline justifies investigating checkout confusion, but I cannot assume the payment screen causes abandonment. I will compare what guests notice on the cart and payment screens, ask them to explain the charges, and watch for hesitation. I would recommend step-level abandonment tracking as a future measurement need.
+
+### Gap 2: The Solution Disguised as a Problem
+
+What the ticket asks for: Dev proposes adding a running breakdown to the cart.
+
+The problem underneath it: First-time and occasional guests see a total but may not understand what makes it up or why it changes between restaurants.
+
+How I know they're different: HEARD-204 says the total is already on the cart, but the itemized breakdown is three taps later on the payment screen. Fees vary from 0% to 18% by restaurant. The complaint wording suggests confusion, but Dev admits he does not know whether people leave because the fee is high or because it surprises them. A running breakdown is one possible solution, not the problem itself.
+
+Does the proposed solution address the real problem? Partly. A visible breakdown could explain the total earlier, but a running display might clutter a small cart and still not address frustration with a high fee. I would test understanding and hesitation before deciding whether a persistent breakdown is necessary.
+
+Source: HEARD-204 ticket, “Problem statement,” “What we don't know,” and “Constraints”; Heard PM Context Pack, FAQ (“What changed in March?” and “Can we just show the fee earlier?”).
+
+### Gap 3: The Unstated Constraint
+
+The constraint: No new checkout steps are allowed, and an itemized cost breakdown must appear before charging the guest. The restaurant's service fee can change at any time between 0% and 18%, so any explanation must reflect the current fee. Guest phone screens also use Rail's comfortable density, and color alone cannot carry meaning.
+
+Where I found it: Heard PM Context Pack, “Constraints registry” (Business, Legal, and System); HEARD-204 ticket, “Constraints”; RAIL.md, “Three axes” and “Applying the axes.”
+
+Why the ticket doesn't mention it: Dev includes the changing fee range in the ticket, but leaves the broader legal, checkout-step, and Rail rules in shared documentation.
+
+What it rules out: I cannot add a confirmation page, rely on a fixed service-fee example, hide itemized charges until after payment, or distinguish charges only by color. Any clearer explanation has to fit the existing mobile checkout without an extra step.
+
+Decision Before Studio B
+
+I will frame HEARD-204 as a price-understanding problem, not just a late-total problem. My baseline sessions will check whether guests notice and understand the breakdown, whether the fee amount itself bothers them, and whether either issue affects their confidence in completing an order. I will not commit to a running breakdown before those observations.
