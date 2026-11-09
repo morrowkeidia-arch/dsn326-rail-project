@@ -222,3 +222,21 @@ One success measure for Week 6
 Measure: When running the same five-task script on the redesign, 2 of 2 participants will locate the itemized fee breakdown before payment without hints (baseline: 0 of 2). This is a behavioral measure visible in two sessions, not a claim that conversion will improve. Its direction comes from the Heard PM Context Pack checkout-completion metric: 71%, down from 76% before the March fee change.
 
 Known limits: No separate task times were recorded; the promo-code failure was not diagnosed; two participants are not representative of all guests. In Week 6, the exact Week 1 task wording must remain unchanged and times should be captured separately for every task.
+Pre-registered Measure
+Date: November 8, 2026
+ Backlog Item: HEARD-204 – Guests Don’t Know What They’ll Pay Until the Last Screen
+One Measure
+I will measure how many participants can independently find the fee breakdown before reaching the payment screen.
+Current Baseline (Week 2)
+Participant 1: Did not find the fee breakdown (0).
+Participant 2: Did not find the fee breakdown (0).
+Current result: 0 out of 2 participants.
+Success Threshold
+I will consider my design successful if both participants (2 out of 2) can find the fee breakdown in the cart before reaching the payment screen without assistance.
+Failure Threshold
+I will consider my design unsuccessful if one or both participants cannot find the fee breakdown before reaching the payment screen without assistance.
+Possible Confounds
+The Week 6 prototype may have fewer screens and less information than the original system, making the fee breakdown easier to find even if the design would not work as well in a real ordering experience.
+If participants have already completed the original test, they might remember where certain information is located, which could make their performance better for reasons unrelated to the redesign.
+Week 7 Production Measurement
+In a real ordering system, I would track a fee-breakdown-viewed event on the cart screen before the user proceeds to payment. This would help measure how often guests encounter the breakdown across restaurants, although viewing it would not prove they understood every charge.
