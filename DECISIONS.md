@@ -111,3 +111,126 @@ What it rules out: I cannot add a confirmation page, rely on a fixed service-fee
 Decision Before Studio B
 
 I will frame HEARD-204 as a price-understanding problem, not just a late-total problem. My baseline sessions will check whether guests notice and understand the breakdown, whether the fee amount itself bothers them, and whether either issue affects their confidence in completing an order. I will not commit to a running breakdown before those observations.
+
+---
+
+# Week 3: Studio – Three Options
+## DSN 326 – Design Review 3
+Date: November 15, 2026
+Backlog Item: HEARD-204 – Guests Don't Know What They'll Pay Until the Last Screen
+
+## 1. Problem
+
+Customers do not always understand their total cost because the fee breakdown appears late in checkout.
+
+During my Week 2 testing, both participants completed their tasks, but neither found the fee breakdown. One participant also mentioned that the text was too small.
+
+My goal is to make prices and fees easier to understand before customers place their orders.
+
+## 2. Three Design Options
+
+### Option A: Itemized Cart
+
+This option shows the price breakdown directly in the shopping cart.
+
+The customer can see the subtotal, service fee, taxes, and final total before continuing to checkout.
+
+Example:
+- Chicken burrito: $12.00
+- Chips and salsa: $5.00
+- Subtotal: $17.00
+- Service fee: $1.70
+- Tax: $1.36
+- Total: $20.06
+
+This is my cheapest option because it uses the existing cart and requires fewer changes.
+
+### Option B: Menu Pricing
+
+This option shows estimated prices and fees while customers are browsing the menu.
+
+Example:
+- Chicken burrito: $12.00
+- Chips and salsa: $5.00
+- Estimated subtotal: $17.00
+- Estimated service fee: $1.70
+- Estimated tax: $1.36
+- Estimated total: $20.06
+
+Customers can see an estimated total before adding the items to their cart.
+
+This option helps prevent price surprises earlier in the ordering process.
+
+### Option C: Checkout Review
+
+This option combines the order details, fees, tip, and payment total on the existing checkout screen.
+
+Example:
+- Pickup: 6:30 PM
+- Items: $17.00
+- Service fee: $1.70
+- Tax: $1.36
+- Tip: $3.00
+- Pay: $23.06
+
+This option helps customers review everything together before placing their orders.
+
+The example prices are illustrative. Actual fees must reflect the restaurant's current settings.
+
+## 3. Tradeoff Table
+
+| Tradeoff | Option A: Cart | Option B: Menu | Option C: Checkout |
+|---|---|---|---|
+| What it is and what it does best | Shows all fees in the cart. Best for making the price breakdown easy to find. | Shows estimated costs while browsing. Best for preventing surprises early. | Combines charges and payment details. Best for final order review. |
+| What it costs the user | Takes up more space in the cart and may require scrolling. | Adds more information to the menu, which may feel crowded. | Requires customers to review more information on one screen. |
+| What it costs the system | SMALL build. Reuses Rail Card, ListRow, and Button components. Existing spacing and text tokens can support the layout. Needs current fee calculations but no obvious new component. | LARGE build. Reuses Rail Card, ListRow, and Button components. Needs estimated-price calculations for items and modifiers. May require documenting a new price-estimate pattern. | MEDIUM build. Reuses Rail Card, ListRow, Input, and Button components. Needs checkout layout changes and an updated review-summary pattern. |
+| What it assumes | Customers will notice and understand the breakdown when it appears in the cart. | Customers want to understand estimated fees before adding items. | Customers prefer reviewing all charges together before payment. |
+| What would kill it | Test participants still cannot identify the service fee in the cart without help. | Test participants confuse estimated prices with guaranteed final prices. | Test participants overlook the final total or cannot locate the tip option. |
+
+## 4. Rail Design System Considerations
+
+According to RAIL.md, the existing design system includes components such as Card, ListRow, Button, Input, and Badge.
+
+All three options are intended for the Guest phone experience using comfortable density and the standard environment.
+
+The system requires a minimum touch target of 44px.
+
+I would reuse existing components and tokens before considering new components.
+
+Option A requires the smallest expected build and maintenance effort.
+
+Option B requires more development, testing, and documentation because estimated prices must stay accurate as orders change.
+
+Option C requires changes to the checkout layout and testing to make sure customers can still complete payment easily.
+
+Any new reusable pattern would also need documentation and design system review before becoming a standard.
+
+## 5. My Preferred Option
+
+I would choose Option A: Itemized Cart.
+
+I chose this option because it directly addresses the problem that appeared in my Week 2 usability testing.
+
+Neither participant found the fee breakdown, so displaying it directly in the cart seems like a reasonable first solution.
+
+It also has the smallest estimated development cost and does not require adding another checkout step.
+
+However, Option B may be better at preventing surprises earlier, and Option C may help customers make their final payment decision.
+
+I would not eliminate either option without testing.
+
+## 6. What I Would Test Next
+
+I would show participants all three designs and ask them to identify the service fee and final total.
+
+I would also ask which design makes the pricing easiest to understand.
+
+This would help determine whether my preferred option actually works better for customers.
+
+The Week 3 preference test has not been completed yet, so I am not claiming that one option has tested better than the others.
+
+## 7. Design Decision
+
+My current recommendation is to explore Option A first because it addresses the clearest usability problem with the smallest estimated system change.
+
+The next step is to compare all three options through a preference test before moving one design to full fidelity.
