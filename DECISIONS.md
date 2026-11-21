@@ -235,3 +235,27 @@ My current recommendation is to explore Option A first because it addresses the 
 
 The next step is to compare all three options through a preference test before moving one design to full fidelity.
 I am leaning toward Option A because it makes the fee breakdown visible earlier in the cart without requiring a major change to the Rail system. However, I know this is still an assumption because both participants completed checkout, even though neither found the fee breakdown. I want to test whether showing the fees earlier helps guests understand their total and prevents them from being surprised by additional charges.
+Week 4 Studio A — HEARD-204 Direction and Constraint (November 20, 2026)
+Decision: Choose Option A provisionally. Use an always-visible, compact fee summary in the existing cart totals area, with comfortable density on phone and compact density on desktop. Do not enlarge the cart or hide ordered item names, quantities, or prices.
+
+Evidence: In Week 2, two of two participants completed checkout, but neither found the fee breakdown. This establishes a discoverability issue, not a demonstrated surprise payment or abandonment. One Week 3 classmate preference reply favored Option C because guests may review fees more closely at final checkout. Preference alone does not prove performance.
+
+Unknown / falsifier: We still do not know whether an earlier fee display actually changes guest understanding or prevents unexpected-charge frustration. If a follow-up comparison shows guests overlook A's cart fee row but notice and correctly explain fees in C's final review, switch to C.
+
+Other options / Cut: Option B — cut for now because dynamic price estimation as modifiers change increases build and maintenance cost. Option C — deferred, retained as a comparison in follow-up testing rather than discarded.
+
+Heard setting: Restaurant service fee configurable from 0% to 18%. When set to 0%, omit the service-fee row, but keep subtotal, applicable tax, and total visible.
+
+Marisol's actual Week 4 memo constraint: On phone, cart is comfortable; on desktop, cart column is compact. The fee display must fit without crowding out ordered items. Do not design for only one viewport.
+
+Clarifying question: Does the cart totals area have to stay the same height, or can its internal content be reorganized while preserving the item list?
+
+No-answer plan: Assume cart height cannot increase; place short subtotal / service fee / taxes / total rows in the existing totals area, remove extra explanatory copy and unnecessary headers, and check layouts at both densities. Verify existing Rail components during build.
+
+Response: Accept and re-plan rather than adding a larger breakdown panel. Keep item names, quantities, and prices unchanged; put extra fee explanation behind an optional disclosure.
+
+Tradeoff: Less explanation is visible immediately, so a curious guest needs one extra interaction to understand a fee.
+
+Reversibility: Reversible cart presentation change, avoiding a new shared Rail component. Restore the old totals presentation if observed comprehension gets worse.
+
+Next evidence: Test at phone and desktop widths whether guests can correctly state the fee amount and final total before continuing to checkout.
