@@ -234,3 +234,4 @@ The Week 3 preference test has not been completed yet, so I am not claiming that
 My current recommendation is to explore Option A first because it addresses the clearest usability problem with the smallest estimated system change.
 
 The next step is to compare all three options through a preference test before moving one design to full fidelity.
+I am leaning toward Option A because it makes the fee breakdown visible earlier in the cart without requiring a major change to the Rail system. However, I know this is still an assumption because both participants completed checkout, even though neither found the fee breakdown. I want to test whether showing the fees earlier helps guests understand their total and prevents them from being surprised by additional charges.
