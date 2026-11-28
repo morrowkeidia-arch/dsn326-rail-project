@@ -327,3 +327,12 @@ https://www.figma.com/design/WTYow9iuwaWMl4ZZPFHahT
 ## Rail Checker Results
 
 I ran my prototype's HTML through the Rail checker, and it passed. The checker did not flag any violations in the submitted HTML. I accepted this result without making additional changes. This provides evidence of Rail compliance within the scope of the automated check, although it does not verify all interactive states or responsive layouts.
+## Week 6 Usability Testing Plan
+
+I plan to conduct two usability testing sessions using the published Riverbend Grill prototype. I will use the original Week 1 testing script to compare the redesigned experience against my previous usability findings.
+
+The participants will attempt all five original tasks. My primary focus will be determining whether guests can successfully locate and understand the itemized pricing breakdown before payment. I will record task completion, time, difficulties and participant feedback.
+
+I will also document the known checkout limitation so that unsuccessful payment completion is not mistaken for participant error.
+
+Target testing dates: November 30–December 1, 2026. Participants and session times are pending confirmation.
