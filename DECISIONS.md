@@ -259,3 +259,68 @@ Tradeoff: Less explanation is visible immediately, so a curious guest needs one 
 Reversibility: Reversible cart presentation change, avoiding a new shared Rail component. Restore the old totals presentation if observed comprehension gets worse.
 
 Next evidence: Test at phone and desktop widths whether guests can correctly state the fee amount and final total before continuing to checkout.
+:::writing{variant="document" id="82641"}
+# Week 5 – Studio: The Build
+
+**Date:** November 27, 2026  
+**Ticket:** HEARD-204  
+**Project:** Riverbend Grill – Guest Ordering Experience
+
+## Drift Audit
+
+| What differed | Rail token or rule involved | Responsibility | Decision |
+|---|---|---|---|
+| FARO5 initially failed to apply the $5 discount. | Input success/error states and `--text-success` | AI tool. Discount functionality was explicitly requested. | Fixed and verified that the discount and total update correctly. |
+| Menu cards initially contained no food images. | Card composition and `--radius-md` | My specification did not provide individual image assets or detailed image requirements. | Partially fixed. Illustrations were added instead of photographs. Accepted temporarily. |
+| The hamburger navigation initially did not respond. | Interactive controls and `--target-min` | My initial specification did not describe the navigation behavior in enough detail. | Fixed. The account navigation now opens on mobile. |
+| Account details displays an informational message instead of a complete account screen. | Feedback states and interaction behavior | My specification did not define the full account experience. | Deferred because account management is outside the main ticket scope. |
+| Neither saved-card payment nor cash at pickup completes the order. | Button interaction and order confirmation state | AI tool. Simulated checkout was explicitly requested. | Deferred because the daily AI token allowance was exhausted. Checkout is reachable, but order completion remains unsuccessful. |
+| The discount Apply button sits lower than its associated input field. | `--space-inset-md` and form alignment | My specification did not explicitly define the alignment. | Accepted temporarily because discount functionality is working. |
+| The initial build did not generate a publishable output directory. | Preservation of the existing Rail project structure | AI-generated build configuration | Fixed manually by updating package.json and running npm run build to generate the dist directory without modifying Rail. |
+
+The Rail tokens listed identify relevant design-system concerns. Exact computed token values and component compliance still require code inspection.
+
+## State Testing
+
+I tested the loading, error, offline and empty-cart preview states. The loading state displays skeleton placeholders, the error state provides a retry option, and the offline state informs the guest that a connection is required. Cart preservation during an actual network interruption has not been verified.
+
+The empty-cart state displays a clear message, provides a Browse Menu button and disables checkout.
+
+## One-Shot vs. Piecework
+
+I found that the one-shot approach worked well for creating the overall structure of the restaurant ordering experience, but it missed several important functional and visual details. Piecework was more effective because I could focus on individual problems rather than asking the AI to rebuild everything at once. For example, I was able to correct the discount functionality and navigation by providing more specific instructions. This experience showed me how important it is to communicate interaction behavior, component states and design expectations instead of assuming the AI will understand everything from a screenshot.
+
+## AI Disclosure
+
+I used Bolt to generate the prototype from my existing Rail repository and Figma screenshot. I used ChatGPT to help develop prompts, troubleshoot publishing errors and organize my findings. I manually tested the website and reviewed the AI-generated changes.
+
+My three main AI-directed corrections were:
+
+1. Corrected the discount input and pricing feedback.
+2. Restored the image area within the menu cards.
+3. Corrected the account navigation interaction.
+
+I also manually corrected the publishing configuration after Bolt failed to generate an output directory.
+
+## Rail 1.0.1 Patch
+
+I checked Canvas for the separate Rail 1.0.1 patch announcement but could not locate it before submission. I left the original Rail tokens unchanged rather than introducing an unauthorized system modification.
+
+## Known Limitations
+
+The prototype uses placeholder illustrations instead of actual food photographs. Account details remain incomplete, and simulated payment does not successfully complete an order. All five intended ordering tasks are reachable, although the final task cannot be completed successfully.
+
+The primary HEARD-204 objective is functional because guests can review their subtotal, discount, service fee and estimated total before payment.
+
+## Published Build
+
+https://morrowkeidia-arch-ds-ot2a.bolt.host
+
+## Repository
+
+https://github.com/morrowkeidia-arch/dsn326-rail-project
+
+## Figma
+
+https://www.figma.com/design/WTYow9iuwaWMl4ZZPFHahT
+:::I checked the official Rail documentation for the token names. It specifies comfortable density on Guest phones, compact density on Guest desktops, and a 44px minimum interaction target for both. We haven't measured those targets yet, so I'm not claiming that they passed.
