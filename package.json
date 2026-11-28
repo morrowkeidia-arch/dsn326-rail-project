@@ -2,5 +2,10 @@
   "name": "rail-starter",
   "version": "1.0.0",
   "private": true,
-  "description": "Rail design system starter — Heard Guest + Line. Plain HTML, CSS and vanilla JS. No build step."
+  "description": "Riverbend Grill ordering prototype",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node -e \"const fs=require('fs'); fs.mkdirSync('dist',{recursive:true}); for(const f of ['index.html','app.css','app.js','rail']) fs.cpSync(f,'dist/'+f,{recursive:true}); console.log('Build completed');\""
+  }
 }

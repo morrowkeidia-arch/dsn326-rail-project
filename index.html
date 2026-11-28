@@ -3,112 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rail — Heard Design System</title>
-
-  <!-- Fonts -->
+  <title>Riverbend Grill — Heard Guest</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <!-- Lucide Icons (CDN) -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-  <!-- Rail tokens and components -->
   <link rel="stylesheet" href="rail/tokens.css">
+  <link rel="stylesheet" href="rail/utilities/reset.css">
+  <link rel="stylesheet" href="rail/layouts/page.css">
   <link rel="stylesheet" href="rail/components/Button.css">
   <link rel="stylesheet" href="rail/components/Input.css">
   <link rel="stylesheet" href="rail/components/Stepper.css">
   <link rel="stylesheet" href="rail/components/Select.css">
-  <link rel="stylesheet" href="rail/components/Checkbox.css">
-  <link rel="stylesheet" href="rail/components/Switch.css">
   <link rel="stylesheet" href="rail/components/Badge.css">
   <link rel="stylesheet" href="rail/components/Card.css">
   <link rel="stylesheet" href="rail/components/ListRow.css">
   <link rel="stylesheet" href="rail/components/Dialog.css">
   <link rel="stylesheet" href="rail/components/Toast.css">
   <link rel="stylesheet" href="rail/components/Tabs.css">
-  <link rel="stylesheet" href="rail/components/Logo.css">
-  <link rel="stylesheet" href="rail/utilities/reset.css">
-  <link rel="stylesheet" href="rail/layouts/page.css">
+  <link rel="stylesheet" href="app.css">
+  <meta property="og:image" content="https://bolt.new/static/og_default.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bolt.new/static/og_default.png">
 </head>
 <body>
-  <!--
-    Rail Starter — Heard Design System
-
-    HOW TO USE THIS FILE:
-
-    1. This is a starting point. Replace the content below with your feature.
-
-    2. Set density + environment on the outermost container:
-       - Guest phone:    class="density-comfortable env-standard"
-       - Guest desktop:  class="density-compact env-standard"
-       - Line (always):  class="density-service env-high-glare surface-line"
-
-    3. Use only Rail components and tokens. Never hardcode colors,
-       spacing, or type sizes. Use var(--token-name) for everything.
-
-    4. See /gallery.html for every component rendered at each density,
-       and /RAIL.md for the class names and tokens in writing.
-
-    5. /legacy/ is Heard as it ships today. Test it, don't fix it.
-  -->
-
-  <div id="app" class="density-comfortable env-standard">
-    <header class="page-header stack stack--sm">
-      <h1 class="type-heading">Rail Starter</h1>
-      <p class="type-body" style="color: var(--text-secondary);">
-        Heard Design System — ready for your feature build.
-      </p>
-      <p class="type-caption" style="color: var(--text-secondary);">
-        <a href="gallery.html">Component gallery</a> &middot;
-        <a href="RAIL.md">RAIL.md</a> &middot;
-        <a href="legacy/">The current state</a>
-      </p>
+  <div id="app" class="prototype-app density-comfortable env-standard">
+    <header class="prototype-header">
+      <button class="rail-button rail-button--tertiary prototype-header__menu" type="button" data-action="open-nav" aria-label="Open account navigation" aria-expanded="false" aria-controls="account-nav"><span class="prototype-icon">☰</span></button>
+      <div class="prototype-brand">
+        <span class="prototype-brand__mark">R</span>
+        <span class="type-heading">Riverbend Grill</span>
+      </div>
+      <button class="rail-button rail-button--tertiary prototype-cart-button" type="button" data-action="cart" aria-label="Open cart">
+        <span class="prototype-cart-icon">▱</span><span class="rail-badge rail-badge--count" id="header-count">0</span>
+      </button>
     </header>
 
-    <main class="page-main">
-      <!-- Your feature goes here -->
-
-      <section class="page-section stack stack--md">
-
-        <div class="inline inline--sm" style="flex-wrap: wrap;">
-          <button class="rail-button rail-button--primary">
-            Add to Cart
-          </button>
-          <button class="rail-button rail-button--secondary">
-            View Menu
-          </button>
-          <button class="rail-button rail-button--tertiary">
-            Cancel
-          </button>
-        </div>
-
-        <div class="rail-input">
-          <label class="rail-input__label" for="demo-input">Search restaurants</label>
-          <input class="rail-input__field" type="search" id="demo-input" placeholder="Pizza, sushi, tacos...">
-          <span class="rail-input__helper">Try a dish, a cuisine, or a neighborhood.</span>
-        </div>
-
-        <div class="rail-card">
-          <div class="rail-card__body">
-            <h3 class="rail-card__title">Margherita Pizza</h3>
-            <p class="rail-card__description">Fresh mozzarella, San Marzano tomatoes, basil, olive oil</p>
-            <div class="rail-card__meta">
-              <span>$14.50</span>
-              <span>12 min</span>
-            </div>
+    <main class="prototype-main">
+      <div class="prototype-state-tools" aria-label="Prototype state previews">
+        <span class="type-caption">Preview</span>
+        <button class="rail-button rail-button--tertiary" type="button" data-state="loading">Loading</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-state="error">Error</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-state="offline">Offline</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-state="ready">Reset</button>
+      </div>
+      <div id="status-region" aria-live="polite"></div>
+      <section id="menu-view" class="prototype-view" aria-labelledby="menu-title">
+        <div class="prototype-hero">
+          <div>
+            <span class="rail-badge rail-badge--label rail-badge--info">Pickup · 15 min</span>
+            <h1 class="type-display" id="menu-title">Good food,<br>right around the bend.</h1>
+            <p class="type-body">Fresh, fast, and made for your day.</p>
           </div>
+          <div class="prototype-hero__art" aria-hidden="true"><span></span><i></i></div>
         </div>
+        <div class="prototype-tabs rail-tabs rail-tabs--segmented" id="menu-tabs" role="tablist" aria-label="Menu sections"></div>
+        <div id="menu-content" class="prototype-menu-content"></div>
+      </section>
 
+      <section id="cart-view" class="prototype-view" hidden aria-labelledby="cart-title">
+        <div class="prototype-view-heading">
+          <button class="rail-button rail-button--tertiary prototype-back" type="button" data-action="menu">← Menu</button>
+          <div><span class="type-caption prototype-eyebrow">Your order</span><h1 class="type-heading" id="cart-title">Review your cart</h1></div>
+        </div>
+        <div id="cart-content"></div>
+      </section>
+
+      <section id="checkout-view" class="prototype-view" hidden aria-labelledby="checkout-title">
+        <div class="prototype-view-heading">
+          <button class="rail-button rail-button--tertiary prototype-back" type="button" data-action="cart">← Cart</button>
+          <div><span class="type-caption prototype-eyebrow">Final step</span><h1 class="type-heading" id="checkout-title">Checkout</h1></div>
+        </div>
+        <div id="checkout-content"></div>
       </section>
     </main>
-  </div>
 
-  <script>
-    // Initialize Lucide icons
-    if (typeof lucide !== 'undefined') {
-      lucide.createIcons();
-    }
-  </script>
+    <div class="rail-dialog-backdrop" id="nav-backdrop" hidden></div>
+    <dialog class="rail-dialog prototype-nav-dialog" id="account-nav" aria-labelledby="account-nav-title" aria-modal="true">
+      <div class="rail-dialog__header">
+        <h2 class="rail-dialog__title" id="account-nav-title">Account</h2>
+        <button class="rail-dialog__close" type="button" data-action="close-nav" aria-label="Close account navigation">×</button>
+      </div>
+      <div class="rail-dialog__body prototype-nav-list">
+        <button class="rail-button rail-button--tertiary" type="button" data-nav="menu">Menu</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-nav="orders">Your orders</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-nav="account">Account details</button>
+        <button class="rail-button rail-button--tertiary" type="button" data-nav="help">Help &amp; support</button>
+      </div>
+    </dialog>
+    <footer id="sticky-bar" class="prototype-sticky-bar"></footer>
+    <div class="rail-toast-region" id="toast-region" role="status" aria-live="polite" aria-label="Notifications"></div>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
