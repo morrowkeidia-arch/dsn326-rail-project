@@ -324,3 +324,6 @@ https://github.com/morrowkeidia-arch/dsn326-rail-project
 
 https://www.figma.com/design/WTYow9iuwaWMl4ZZPFHahT
 :::I checked the official Rail documentation for the token names. It specifies comfortable density on Guest phones, compact density on Guest desktops, and a 44px minimum interaction target for both. We haven't measured those targets yet, so I'm not claiming that they passed.
+## Rail Checker Results
+
+I ran my prototype's HTML through the Rail checker, and it passed. The checker did not flag any violations in the submitted HTML. I accepted this result without making additional changes. This provides evidence of Rail compliance within the scope of the automated check, although it does not verify all interactive states or responsive layouts.
